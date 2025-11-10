@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cibercom Security | Servicios</title>
+    <meta name="description"
+        content="Servicios profesionales en instalación, mantenimiento y monitoreo de cámaras de seguridad. Cibercom Security.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0f1724;
+            --card: #0b1220;
+            --accent: #06b6d4;
+            --muted: #9aa4b2;
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: linear-gradient(180deg, #081021 0%, #071022 60%);
+            color: #e6eef6;
+            line-height: 1.6;
+            padding: 40px 5%;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #0ea5a0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #042028;
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        p.lead {
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            background: var(--card);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-6px);
+        }
+
+        .service img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .service h4 {
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .service p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            color: var(--muted);
+            font-size: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="brand">
+            <img src="img/Z6.png" alt="Logo Cibercom Security"
+                style="width: 70px; height:70px; border-radius:50%; object-fit:cover; background:#fff; padding:8px;">
+            <div style="font-weight:800">Cibercom Security</div>
+            <div style="font-size:12px;color:var(--muted)">Cámaras • Venta • Instalación profesional</div>
+        </div>
+        </div>
+
+        <nav>
+            <ul style="list-style:none;display:flex;gap:16px;align-items:center;margin:0;padding:0">
+                <li><a href="index.html" style="color:var(--muted);text-decoration:none;font-weight:600">Inicio</a>
+                </li>
+
+                <li style="position:relative;">
+                    <a href="#" style="color:var(--muted);text-decoration:none;font-weight:600;">Productos ▼</a>
+                    <ul style="
+                        position:absolute;
+                        top:100%;
+                        left:0;
+                        background:var(--card);
+                        border-radius:10px;
+                        padding:8px 0;
+                        display:none;
+                        flex-direction:column;
+                        min-width:160px;
+                        box-shadow:0 4px 10px rgba(0,0,0,0.4);
+                      ">
+                        <li><a href='PRODUCTOS/hikvision.html'
+                                style='display:block;padding:8px 14px;color:var(--muted);text-decoration:none;'>Hikvision</a>
+                        </li>
+                        <li><a href='PRODUCTOS/wifi.html'
+                                style='display:block;padding:8px 14px;color:var(--muted);text-decoration:none;'>WiFi</a>
+                        </li>
+                        <li><a href='PRODUCTOS/dahua.html'
+                                style='display:block;padding:8px 14px;color:var(--muted);text-decoration:none;'>Dahua</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="servicios.html"
+                        style="color:var(--muted);text-decoration:none;font-weight:600;">Servicios</a>
+                </li>
+                <li><a href="nosotros.html"
+                        style="color:var(--muted);text-decoration:none;font-weight:600;">Nosotros</a>
+                </li>
+                <li><a class="btn" href="tel:3112662165">Contáctanos</a></li>
+            </ul>
+
+            <script>
+                // Mostrar menú desplegable al pasar el mouse
+                const productosMenu = document.querySelector('nav li[position]');
+            </script>
+        </nav>
+
+        <script>
+            // hace aparecer el submenú al pasar el mouse
+            const dropdown = document.querySelector('nav li[style*="position:relative"]');
+            const submenu = dropdown.querySelector('ul');
+            dropdown.addEventListener('mouseenter', () => submenu.style.display = 'flex');
+            dropdown.addEventListener('mouseleave', () => submenu.style.display = 'none');
+        </script>
+    </header>
+
+    <main>
+        <h1>Servicios</h1>
+        <p class="lead">En <strong>Cibercom Security</strong> ofrecemos soluciones integrales para proteger hogares,
+            empresas y propiedades con tecnología avanzada en videovigilancia y control.</p>
+
+        <div class="grid">
+            <div class="service">
+                <img src="img/J10.avif" alt="Instalación de cámaras">
+                <h4>Instalación Profesional</h4>
+                <p>Evaluación del sitio, cableado, montaje y configuración por técnicos certificados.</p>
+            </div>
+
+            <div class="service">
+                <img src="img/K11.jpeg" alt="Mantenimiento cámaras">
+                <h4>Mantenimiento Preventivo</h4>
+                <p>Revisión, limpieza y optimización de cámaras y grabadores para prolongar su vida útil.</p>
+            </div>
+
+            <div class="service">
+                <img src="img/H12.jpeg" alt="Monitoreo de seguridad">
+                <h4>Monitoreo Remoto</h4>
+                <p>Supervisión continua desde tu celular o centro de control con alertas inteligentes.</p>
+            </div>
+
+            <div class="service">
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80"
+                    alt="Asesoría técnica">
+                <h4>Asesoría Técnica</h4>
+                <p>Recomendaciones personalizadas según tus necesidades y tipo de instalación.</p>
+            </div>
+
+            <div class="service">
+                <img src="img/Y13.jpeg" alt="Soporte técnico">
+                <h4>Soporte y Configuración</h4>
+                <p>Conexión a redes, configuración remota y asistencia en el uso de las aplicaciones.</p>
+            </div>
+        </div>
+        <div style="
+          background-color: rgba(6, 182, 212, 0.1);
+          border-left: 4px solid var(--accent);
+          padding: 12px 16px;
+          border-radius: 10px;
+          color: var(--muted);
+          margin-top: 20px;
+        ">
+            <strong>Nota:</strong> Los precios y tiempos de instalación pueden variar según la ubicación y el tipo de
+            servicio
+            que el cliente requiera.
+            Te recomendamos solicitar una cotización personalizada.
+        </div>
+    </main>
+    <footer>
+        © 2025 Cibercom Security — Todos los derechos reservados.
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cibercom Security — Cámaras & Servicios</title>
+    <meta name="description"
+        content="Instalación profesional de cámaras de seguridad. Productos y servicios de Cibercom Security." />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f1724;
+            /* oscuro */
+            --card: #0b1220;
+            --accent: #06b6d4;
+            /* cian brillante */
+            --muted: #9aa4b2;
+            --glass: rgba(255, 255, 255, 0.03);
+            --radius: 14px;
+            --maxw: 1100px;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            background: linear-gradient(180deg, #081021 0%, #071022 60%);
+            color: #e6eef6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+            padding: 24px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: var(--maxw)
+        }
+
+        /* NAV */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 28px
+        }
+
+        .brand {
+            display: flex;
+            gap: 12px;
+            align-items: center
+        }
+
+        .logo {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), #0ea5a0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #042028
+        }
+
+        nav {
+            display: flex;
+            gap: 16px;
+            align-items: center
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 600
+        }
+
+        .btn {
+            background: var(--accent);
+            color: #042028;
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        /* HERO */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: center;
+            margin-bottom: 28px
+        }
+
+        .hero-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+            padding: 28px;
+            border-radius: 16px;
+            box-shadow: 0 6px 20px rgba(2, 6, 23, 0.6);
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: 28px
+        }
+
+        p.lead {
+            color: var(--muted);
+            margin: 0 0 18px
+        }
+
+        .features {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap
+        }
+
+        .feature {
+            background: var(--glass);
+            padding: 8px 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            color: var(--muted)
+        }
+
+        .call-card {
+            background: linear-gradient(180deg, #042231, #07323a);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center
+        }
+
+        .phone {
+            font-size: 20px;
+            font-weight: 800;
+            margin: 6px 0
+        }
+
+        .contact-cta {
+            display: inline-block;
+            margin-top: 8px
+        }
+
+        /* SECTIONS */
+        section {
+            margin-bottom: 22px
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px
+        }
+
+        .product {
+            background: var(--card);
+            padding: 14px;
+            border-radius: 12px
+        }
+
+        .product img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px
+        }
+
+        .product h4 {
+            margin: 0 0 6px
+        }
+
+        .price {
+            font-weight: 700
+        }
+
+        footer {
+            opacity: 0.9;
+            color: var(--muted);
+            padding: 18px 0;
+            text-align: center
+        }
+
+        /* responsive */
+        @media (max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="brand">
+                <div class="logo">CS</div>
+                <div>
+                    <div style="font-weight:800">Cibercom Security</div>
+                    <div style="font-size:12px;color:var(--muted)">Cámaras • Venta • Instalación profesional</div>
+                </div>
+            </div>
+
+            <nav>
+
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="productos.html">Inicio</a></li>
+                <ul>
+                    <li><a href="PRODUCTOS/hikvision.html">hikvision</a></li>
+                    <li><a href="PRODUCTOS/wifi.html">wifi</a></li>
+                    <li><a href="PRODUCTOS/dahua.html">Dahua</a></li>
+
+                    <a href="servicios.html" class="bottom redireccion">Servicios</a>
+                    <a href="#contacto">Contacto</a>
+                    <!-- botón de llamada -->
+                    <a class="btn" href="tel:3112662165">Contáctanos</a>
+            </nav>
+        </header>
+
+        <main>
+            <section id="inicio" class="hero">
+                <div class="hero-card">
+                    <h1>Protege lo que más importa con <span style="color:var(--accent)">Cibercom Security</span></h1>
+                    <p class="lead">Instalación profesional de cámaras de seguridad — soluciones para hogares y
+                        empresas. Asesoría, venta de equipos y servicio técnico certificado.</p>
+
+                    <div class="features">
+                        <div class="feature">Instaladores certificados</div>
+                        <div class="feature">Garantía en equipos</div>
+                        <div class="feature">Monitoreo opcional</div>
+                        <div class="feature">Soporte local</div>
+                    </div>
+
+                    <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+                        <a class="btn" href="tel:3112662165">Llamar: 3112662165</a>
+                        <a style="background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--muted);font-weight:700"
+                            href="productos.html">Ver productos</a>
+                    </div>
+                </div>
+
+                <aside class="call-card">
+                    <div style="font-size:13px;color:var(--muted)">¿Necesitas cotización inmediata?</div>
+                    <div class="phone">3112662165</div>
+                    <div class="contact-cta"><a class="btn" href="tel:3112662165">Contáctanos</a></div>
+                </aside>
+            </section>
+
+    </div>
+    <div style="background:var(--card);padding:14px;border-radius:12px">
